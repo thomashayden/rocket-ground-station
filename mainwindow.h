@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "handlefullscreen.h"
 
 namespace Ui {
 class MainWindow;
