@@ -17,10 +17,28 @@ MainWindow::MainWindow(QWidget *parent) :
     // This shouldn't be needed, but just in case
     ui->label_pic->setScaledContents(true);
 
-    ui->label_mvc->setStyleSheet("QLabel { color : green; }");
+    MainWindow::red = new QPixmap("/home/thomas/Northeastern/AIAA/CompetitionRocketry/GroundStation/red.png");
+    MainWindow::green = new QPixmap("/home/thomas/Northeastern/AIAA/CompetitionRocketry/GroundStation/green.png");
+
+    ui->label_comm_status->setPixmap(*green);
+    ui->label_mov_status->setAlignment(Qt::AlignRight);
+    ui->label_mov_status->setPixmap(*red);
+    ui->label_col_status->setPixmap(*red);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete red;
+    delete green;
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->label_mov_status->setPixmap(*green);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->label_col_status->setPixmap(*green);
 }
