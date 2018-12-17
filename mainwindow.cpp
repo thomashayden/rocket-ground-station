@@ -12,13 +12,13 @@ MainWindow::MainWindow(QWidget *parent) :
     HandleFullScreen* key = new HandleFullScreen(this);
     installEventFilter(key);
 
-    QPixmap pix("/home/thomas/Northeastern/AIAA/CompetitionRocketry/GroundStation/test.jpeg");
+    QPixmap pix(":/res/test.jpeg");
     ui->label_pic->setPixmap(pix);
     // This shouldn't be needed, but just in case
     ui->label_pic->setScaledContents(true);
 
-    MainWindow::red = new QPixmap("/home/thomas/Northeastern/AIAA/CompetitionRocketry/GroundStation/red.png");
-    MainWindow::green = new QPixmap("/home/thomas/Northeastern/AIAA/CompetitionRocketry/GroundStation/green.png");
+    MainWindow::red = new QPixmap(":/res/red.png");
+    MainWindow::green = new QPixmap(":/res/green.png");
 
     ui->label_comm_status->setPixmap(*green);
     ui->label_mov_status->setAlignment(Qt::AlignRight);
