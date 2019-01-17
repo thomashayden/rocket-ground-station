@@ -43,14 +43,14 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>800</width>
-     <height>480</height>
+     <width>1024</width>
+     <height>600</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>800</width>
-     <height>480</height>
+     <width>1024</width>
+     <height>600</height>
     </size>
    </property>
    <widget class="QWidget" name="widget" native="true">
@@ -58,8 +58,8 @@
      <rect>
       <x>-1</x>
       <y>-1</y>
-      <width>800</width>
-      <height>480</height>
+      <width>1024</width>
+      <height>600</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -70,14 +70,14 @@
     </property>
     <property name="minimumSize">
      <size>
-      <width>800</width>
-      <height>480</height>
+      <width>1024</width>
+      <height>600</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>800</width>
-      <height>480</height>
+      <width>1024</width>
+      <height>600</height>
      </size>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -100,14 +100,14 @@
       <widget class="QWidget" name="widget_2" native="true">
        <property name="minimumSize">
         <size>
-         <width>160</width>
-         <height>480</height>
+         <width>384</width>
+         <height>600</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>160</width>
-         <height>480</height>
+         <width>384</width>
+         <height>600</height>
         </size>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -136,7 +136,7 @@
           </property>
           <property name="font">
            <font>
-            <pointsize>16</pointsize>
+            <pointsize>20</pointsize>
             <weight>50</weight>
             <bold>false</bold>
             <underline>false</underline>
@@ -192,19 +192,6 @@
               <number>15</number>
              </property>
              <item>
-              <widget class="QLabel" name="label_4">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Communication</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QLabel" name="label_comm_status">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -219,6 +206,52 @@
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Communication</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
@@ -242,7 +275,7 @@
           </property>
           <property name="font">
            <font>
-            <pointsize>16</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="text">
@@ -317,19 +350,6 @@
               <number>15</number>
              </property>
              <item>
-              <widget class="QLabel" name="label_7">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Move Command</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QLabel" name="label_mov_status">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -350,6 +370,37 @@
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Move Command</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
@@ -417,19 +468,6 @@
               <number>15</number>
              </property>
              <item>
-              <widget class="QLabel" name="label_8">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Collect Command</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QLabel" name="label_col_status">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
@@ -444,6 +482,40 @@
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Collect Command</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
@@ -467,7 +539,7 @@
           </property>
           <property name="font">
            <font>
-            <pointsize>16</pointsize>
+            <pointsize>20</pointsize>
            </font>
           </property>
           <property name="text">
@@ -480,6 +552,11 @@
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Settings</string>
           </property>
@@ -487,6 +564,11 @@
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Log</string>
           </property>
@@ -506,16 +588,21 @@
             <height>150</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;gt; Signal recieved&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;gt; Payload touchdown&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;gt; Sending move command&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;gt; Move command recieved&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&amp;gt; Image recieved&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&amp;gt; Signal recieved&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&amp;gt; Payload touchdown&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&amp;gt; Sending move command&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&amp;gt; Move command recieved&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;&amp;gt; Image recieved&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -523,29 +610,64 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_pic">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
        </property>
-       <property name="minimumSize">
-        <size>
-         <width>640</width>
-         <height>480</height>
-        </size>
+       <property name="topMargin">
+        <number>0</number>
        </property>
-       <property name="maximumSize">
-        <size>
-         <width>640</width>
-         <height>480</height>
-        </size>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
+       <item>
+        <widget class="QLabel" name="logo">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>640</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>640</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_pic">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>640</width>
+           <height>480</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>640</width>
+           <height>480</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
