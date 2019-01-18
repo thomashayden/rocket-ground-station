@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // This shouldn't be needed, but just in case
     ui->label_pic->setScaledContents(true);
 
-    QPixmap logo_pix("/home/thomas/Northeastern/AIAA/aeronu640x120.png");
+    QPixmap logo_pix(":/res/aeronu640x120.png");
     ui->logo->setPixmap(logo_pix);
     // This shouldn't be needed, but just in case
     ui->logo->setScaledContents(true);

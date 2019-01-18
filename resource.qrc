@@ -4,5 +4,6 @@
         <file>res/green.png</file>
         <file>res/red.png</file>
         <file>res/test.jpeg</file>
+        <file>res/aeronu640x120.png</file>
     </qresource>
 </RCC>
