@@ -17,4 +17,10 @@ Once those are installed, it can be compiled and run using the following command
 
 Note that in order to start it (and just it, no DE) when there is no x server running, use the startx command:
 
-    startx ./GroundStation
+    startx ./GroundStation -- -nocursor
+    
+Quick rant: I found basically no documentation on using startx to run a single program. This proved frustrating cause basically nowhere was `-nocursor` mentioned. Turns out that `--` is used to separate the arguments form the program and startx. So all the arguments for `./GroundStation` go before `--` and all the arguments for startx go after `--`. It doesn't work if you put `-nocursor` before `./GroundStation`, which doesn't make any sense, but oh well. And I also don't like that `-nocursor` only has one dash and not two. <\endrant>
+
+To start the program after booting into a tty, the following line can be put into the default user's `.bashrc` (with whatever the path to the GroundStation executable is):
+
+    startx ./rocket-ground-station/GroundStation -- -nocursor
