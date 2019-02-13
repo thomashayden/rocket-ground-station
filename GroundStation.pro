@@ -27,11 +27,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    handlefullscreen.cpp
+    handlefullscreen.cpp \
+    communication.cpp
 
 HEADERS += \
         mainwindow.h \
-    handlefullscreen.h
+    handlefullscreen.h \
+    communication.h
 
 FORMS += \
         mainwindow.ui
