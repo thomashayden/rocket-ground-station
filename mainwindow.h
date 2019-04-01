@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "handlefullscreen.h"
+#include "communication.h"
 
 namespace Ui {
 class MainWindow;

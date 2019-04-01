@@ -1,6 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QHostAddress>
+#include <QAbstractSocket>
+#include <QNetworkInterface>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -29,6 +33,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_mov_status->setAlignment(Qt::AlignRight);
     ui->label_mov_status->setPixmap(*red);
     ui->label_col_status->setPixmap(*red);
+
+    QList<QHostAddress> list = QNetworkInterface::allAddresses();
+
+    for(int nIter=0; nIter<list.count(); nIter++)
+    {
+        if(!list[nIter].isLoopback())
+            if (list[nIter].protocol() == QAbstractSocket::IPv4Protocol )
+                ui->ip_label->setText(ui->ip_label->text() + list[nIter].toString() + "   ");
+
+    }
+
+    ui->pid_label->setText("PID: " + QString::number(QCoreApplication::applicationPid()));
 }
 
 MainWindow::~MainWindow()
@@ -40,10 +56,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    Communication comm;
+    comm.Write("testing");
     ui->label_mov_status->setPixmap(*green);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    Communication comm;
+    comm.SaveImage("more testing");
     ui->label_col_status->setPixmap(*green);
 }

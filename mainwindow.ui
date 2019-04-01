@@ -563,14 +563,28 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_4">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+         <widget class="QLabel" name="ip_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
           <property name="text">
-           <string>Log</string>
+           <string>IP: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="pid_label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>PID: </string>
           </property>
          </widget>
         </item>
@@ -679,7 +693,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>pushButton</tabstop>
   <tabstop>pushButton_2</tabstop>
   <tabstop>pushButton_3</tabstop>
-  <tabstop>pushButton_4</tabstop>
  </tabstops>
  <resources/>
  <connections/>

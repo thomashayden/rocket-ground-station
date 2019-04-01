@@ -2,13 +2,15 @@
 #define COMMUNICATION_H
 
 #include <string>
+#include <python2.7/Python.h>
+#include <QCoreApplication>
 
 class Communication
 {
 public:
     Communication();
-    bool Write(const std::string*);
-    bool SaveImage(const std::string*);
+    bool Write(char*);
+    bool SaveImage(char*);
 };
 
 #endif // COMMUNICATION_H
