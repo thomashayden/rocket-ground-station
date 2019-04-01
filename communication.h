@@ -9,8 +9,8 @@ class Communication
 {
 public:
     Communication();
-    bool Write(char*);
-    bool SaveImage(char*);
+    bool Write(const char*);
+    bool SaveImage(const char*);
 };
 
 #endif // COMMUNICATION_H

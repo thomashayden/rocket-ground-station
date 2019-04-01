@@ -7,7 +7,7 @@ Communication::Communication()
 
 }
 
-bool Communication::Write(char* data)
+bool Communication::Write(const char* data)
 {
     std::string base = "python3 ";
     std::string debug_location = QCoreApplication::applicationDirPath().toUtf8().constData();
@@ -17,7 +17,7 @@ bool Communication::Write(char* data)
     return true;
 }
 
-bool Communication::SaveImage(char* save_location)
+bool Communication::SaveImage(const char* save_location)
 {
     std::string base = "python3 ";
     std::string debug_location = QCoreApplication::applicationDirPath().toUtf8().constData();

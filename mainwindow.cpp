@@ -57,13 +57,15 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     Communication comm;
-    comm.Write("testing");
+    const char* testing = "testing";
+    comm.Write(testing);
     ui->label_mov_status->setPixmap(*green);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
     Communication comm;
-    comm.SaveImage("more testing");
+    const char* testing = "more testing";
+    comm.SaveImage(testing);
     ui->label_col_status->setPixmap(*green);
 }
