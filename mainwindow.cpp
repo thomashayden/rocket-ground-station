@@ -78,7 +78,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::check_buttons()
 {
-    system("./check_gpio.sh");
+    system("sudo ./check_gpio.sh");
     if (is_file_exist("./comm/gpio4high"))
     {
         on_pushButton_clicked();
