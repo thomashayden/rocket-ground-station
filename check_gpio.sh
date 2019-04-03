@@ -7,14 +7,14 @@ echo "in" > /sys/class/gpio/gpio3/direction
 
 if [[ $(cat /sys/class/gpio/gpio4/value) == 1 ]]
 then
-    sleep 0.1
+    sleep 0.01
     if [[ $(cat /sys/class/gpio/gpio4/value) == 1 ]]
     then
         rm ./comm/gpio4high
         touch ./comm/gpio4low # These are the wrong way around because it is normally high while open
     fi
 else
-    sleep 0.1
+    sleep 0.01
     if [[ $(cat /sys/class/gpio/gpio4/value) != 1 ]]
     then
         rm ./comm/gpio4low
@@ -25,14 +25,14 @@ fi
 
 if [[ $(cat /sys/class/gpio/gpio3/value) == 1 ]]
 then
-    sleep 0.1
+    sleep 0.01
     if [[ $(cat /sys/class/gpio/gpio3/value) == 1 ]]
     then
         rm ./comm/gpio3high
         touch ./comm/gpio3low # These are the wrong way around because it is normally high while open
     fi
 else
-    sleep 0.1
+    sleep 0.01
     if [[ $(cat /sys/class/gpio/gpio3/value) != 1 ]]
     then
         rm ./comm/gpio3low
