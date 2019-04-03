@@ -9,8 +9,8 @@ class Communication
 {
 public:
     Communication();
-    bool Write();
-    bool SaveImage();
+    bool Move();
+    bool Collect();
 };
 
 #endif // COMMUNICATION_H
