@@ -4,6 +4,10 @@
 #include <QHostAddress>
 #include <QAbstractSocket>
 #include <QNetworkInterface>
+#include <QObject>
+#include <QTimer>
+#include <iostream>
+#include <fstream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -45,6 +49,10 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     ui->pid_label->setText("PID: " + QString::number(QCoreApplication::applicationPid()));
+
+    timer = new QTimer(this);
+    QObject::connect(timer, SIGNAL(timeout()), this, SLOT(check_buttons()));
+    timer->start(1000);
 }
 
 MainWindow::~MainWindow()
@@ -57,15 +65,30 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     Communication comm;
-    const char* testing = "testing";
-    comm.Write(testing);
+    comm.Move();
     ui->label_mov_status->setPixmap(*green);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
     Communication comm;
-    const char* testing = "more testing";
-    comm.SaveImage(testing);
+    comm.Collect();
     ui->label_col_status->setPixmap(*green);
+}
+
+void MainWindow::check_buttons()
+{
+    system("./check_gpio.sh");
+    if (is_file_exist("./comm/gpio4high"))
+    {
+        on_pushButton_clicked();
+    } else if (is_file_exist("./comm/gpio3high")) {
+        on_pushButton_2_clicked();
+    }
+}
+
+bool MainWindow::is_file_exist(const char *file_name)
+{
+    std::ifstream f(file_name);
+    return f.good();
 }

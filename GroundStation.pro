@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     handlefullscreen.cpp \
-    communication.cpp
+    communication.cpp \
+    GPIOClass.cpp
 
 HEADERS += \
         mainwindow.h \
     handlefullscreen.h \
-    communication.h
+    communication.h \
+    GPIOClass.h
 
 FORMS += \
         mainwindow.ui
@@ -47,4 +49,5 @@ RESOURCES += \
     resource.qrc
 
 DISTFILES += \
-    write.py
+    write.py \
+    test.sh

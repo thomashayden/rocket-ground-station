@@ -7,22 +7,18 @@ Communication::Communication()
 
 }
 
-bool Communication::Write(const char* data)
+bool Communication::Move()
 {
-    std::string base = "python3 ";
-    std::string debug_location = QCoreApplication::applicationDirPath().toUtf8().constData();
-    std::string result = base.append(debug_location.substr(0, debug_location.size()-33)).append("GroundStation/write.py ").append(data);
-    system(result.c_str());
+    std::string base = "python3 move.py";
+    system(base.c_str());
 
     return true;
 }
 
-bool Communication::SaveImage(const char* save_location)
+bool Communication::Collect()
 {
-    std::string base = "python3 ";
-    std::string debug_location = QCoreApplication::applicationDirPath().toUtf8().constData();
-    std::string result = base.append(debug_location.substr(0, debug_location.size()-33)).append("GroundStation/save_image.py ").append(save_location);
-    system(result.c_str());
+    std::string base = "python3 collect.py";
+    system(base.c_str());
 
     return true;
 }
