@@ -52,7 +52,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     timer = new QTimer(this);
     QObject::connect(timer, SIGNAL(timeout()), this, SLOT(check_buttons()));
-    timer->start(1000);
+    timer->start(50);
 }
 
 MainWindow::~MainWindow()

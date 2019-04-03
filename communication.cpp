@@ -9,7 +9,7 @@ Communication::Communication()
 
 bool Communication::Move()
 {
-    std::string base = "python3 move.py";
+    std::string base = "sudo python3 move.py";
     system(base.c_str());
 
     return true;
@@ -17,7 +17,7 @@ bool Communication::Move()
 
 bool Communication::Collect()
 {
-    std::string base = "python3 collect.py";
+    std::string base = "sudo python3 collect.py";
     system(base.c_str());
 
     return true;
